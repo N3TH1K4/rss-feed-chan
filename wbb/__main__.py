@@ -275,7 +275,6 @@ async def commands_callbacc(_, CallbackQuery):
         reply_markup=keyboard,
     )
 
-    await CallbackQuery.message.delete()
 
 
 @app.on_callback_query(filters.regex("stats_callback"))
