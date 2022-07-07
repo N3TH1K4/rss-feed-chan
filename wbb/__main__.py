@@ -124,18 +124,16 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Help ❗️", callback_data="bot_commands"
+                text="Help 🥤", callback_data="bot_commands"
             ),
-        ],
-        [
             InlineKeyboardButton(
-                text="My Stats 👾",
+                text="Stats 🍩",
                 callback_data="stats_callback",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Summon me 🪄",
+                text="Take Me Somewhere 🐹",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -149,7 +147,7 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Go To The Palace👑",
+                text="Home",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
         ],
