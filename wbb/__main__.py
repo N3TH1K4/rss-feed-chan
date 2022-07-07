@@ -34,7 +34,6 @@ from wbb import (
     BOT_NAME,
     BOT_USERNAME,
     LOG_GROUP_ID,
-    USERBOT_NAME,
     aiohttpsession,
     app,
     log,
@@ -94,7 +93,6 @@ async def start_bot():
     print(bot_modules)
     print("+===============+===============+===============+===============+")
     log.info(f"BOT STARTED AS {BOT_NAME}!")
-    log.info(f"USERBOT STARTED AS {USERBOT_NAME}!")
 
     restart_data = await clean_restart_stage()
     try:
