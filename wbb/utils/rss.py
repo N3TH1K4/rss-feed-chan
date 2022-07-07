@@ -25,9 +25,10 @@ class Feed:
             text += f"**Last Updated:** `{self.updated}`\n"
         if "magnet" in self.link:
             text += f"**Magnet:**\n\n `{self.link}`\n\n"
-            
+        if "animepahe" in self.link:
+            text += f"**Website** `Animepahe.com`\n"
         if self.summary and "<div" not in self.summary:
-            text += f"**Summary:** {self.summary.strip()}\n\n\n__Powered By:__ **@Umaru_Doma_feed_bot***"
+            text += f"**Summary:** {self.summary.strip()}\n\n\n__Powered By:__ **@Umaru_Doma_feed_bot**"
 
         if text:
             return "\n".join([i.strip() for i in text.splitlines()])
