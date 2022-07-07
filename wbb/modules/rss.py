@@ -20,7 +20,7 @@ from wbb.utils.dbfunctions import (
 from wbb.utils.functions import get_http_status_code, get_urls_from_text
 from wbb.utils.rss import Feed
 
-__MODULE__ = "RSS"
+__MODULE__ = "🍕 RSS"
 __HELP__ = f"""
 /add_feed [URL] - Add a feed to chat
 /rm_feed - Remove feed from chat
@@ -30,7 +30,7 @@ __HELP__ = f"""
     - You can only add one feed per chat.
     - Currently RSS and ATOM feeds are supported.
     
-**@Goddess_of_War_Rbot**  
+**@Umaru_Doma_feed_bot**  
 """
 
 
