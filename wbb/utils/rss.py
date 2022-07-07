@@ -23,11 +23,11 @@ class Feed:
             text += f"**Published:** `{self.published}`\n"
         if self.updated:
             text += f"**Last Updated:** `{self.updated}`\n"
-        if self.link:
+        if "magnet" in self.link:
             text += f"**Magnet:**\n\n `{self.link}`\n\n"
             
         if self.summary and "<div" not in self.summary:
-            text += f"**Summary:** {self.summary.strip()}\n"
+            text += f"**Summary:** {self.summary.strip()}\n\n\n__Powered By:__ **@Umaru_Doma_feed_bot***"
 
         if text:
             return "\n".join([i.strip() for i in text.splitlines()])
