@@ -65,7 +65,7 @@ async def rss_worker():
                 if "animepahe" in lmao:
                     na = "Watch This!"
                 else:
-                    na = "Link!
+                    na = "Link!"
                 llink = InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton(
