@@ -88,7 +88,7 @@ async def start_bot():
             bot_modules += "|{:<15}".format(i)
         j += 1
     print("+===============================================================+")
-    print("|                              WBB                              |")
+    print("|                              UDF                              |")
     print("+===============+===============+===============+===============+")
     print(bot_modules)
     print("+===============+===============+===============+===============+")
@@ -143,8 +143,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-        f"**Heyo!** It's me `The Goddess of War` **Ishtar**-sama\nI'm invincible and I can protect your groups from disasters and also I can command the members of your group!\nIf you are brave enough to summon me,__Use the below button!__"
-)
+        f"**Konichiwa Onii-Chan** I'm Umaru\nAm a good lazy girl who can give you __RSS__ Feed from websites\nUse `/help` command to get help\nIf you got any problem please contact my **Onii-Chan**!")
 
 keyboard = InlineKeyboardMarkup(
     [
@@ -162,7 +161,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != "private":
         return await message.reply_photo("https://wallpapercave.com/dwp1x/wp6599471.jpg",caption =
-            "**Yo pebble come to my palace for more details!**", reply_markup=keyboard
+            "**Come to My Home for help Onii-Chan! and bring me a cola**", reply_markup=keyboard
         )
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
@@ -175,7 +174,7 @@ async def start(_, message):
         elif "_" in name:
             module = name.split("_", 1)[1]
             text = (
-                    f"Hey baka here is the help for **{HELPABLE[module].__MODULE__}**:\n"
+                    f"Onii-Chan here is the help for **{HELPABLE[module].__MODULE__}**:\n"
                     + HELPABLE[module].__HELP__
             )
             await message.reply(text, disable_web_page_preview=True)
@@ -186,7 +185,7 @@ async def start(_, message):
                 reply_markup=keyb,
             )
     else:
-        await message.reply_photo("https://wallpapercave.com/dwp1x/wp6599519.jpg",
+        await message.reply_photo("https://images7.alphacoders.com/833/833691.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -210,23 +209,23 @@ async def help_command(_, message):
                     ]
                 )
                 await message.reply(
-                    f"Oi pebble Click on the below button to get help about {name}",
+                    f"Onii-Chan Click on the below button to get help about {name}",
                     reply_markup=key,
                 )
             else:
                 await message.reply(
-                    "Yo pebble come to my palace for more details!", reply_markup=keyboard
+                    "Oni-chan come to my home with potato chips for more details!", reply_markup=keyboard
                 )
         else:
             await message.reply(
-                "Yo pebble come to my palace for more details!", reply_markup=keyboard
+                "Oni-chan come to my home with potato chips for more details!", reply_markup=keyboard
             )
     else:
         if len(message.command) >= 2:
             name = (message.text.split(None, 1)[1]).replace(" ", "_").lower()
             if str(name) in HELPABLE:
                 text = (
-                        f"Hey baka here is the help for **{HELPABLE[name].__MODULE__}**:\n"
+                        f"Onii-Cham here is the help for **{HELPABLE[name].__MODULE__}**:\n"
                         + HELPABLE[name].__HELP__
                 )
                 await message.reply(text, disable_web_page_preview=True)
@@ -253,9 +252,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Konichiwa, Its me the Goddess {bot_name}.
-I'm a God who can manage you entire group with great powers.
-You pebble can choose an option below, by clicking a button.
+        """Here Is The Help for you..Now gimme potato chips and a cola!
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -302,7 +299,7 @@ General command are:
         module = (mod_match.group(1)).replace(" ", "_")
         text = (
                 "{} **{}**:\n".format(
-                    "Hey baka here is the help for", HELPABLE[module].__MODULE__
+                    "Oni-Chan here is the help for", HELPABLE[module].__MODULE__
                 )
                 + HELPABLE[module].__HELP__
         )
