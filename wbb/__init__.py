@@ -120,12 +120,8 @@ tbot = TelegramClient('tbot', api_id=API_ID, api_hash=API_HASH).start(bot_token=
 log.info("Starting bot client")
 app.start()
 tbot.start()
-log.info("Starting userbot client")
-app2.start()
-
 log.info("Gathering profile info")
 x = app.get_me()
-y = app2.get_me()
 
 BOT_ID = x.id
 BOT_NAME = x.first_name + (x.last_name or "")
