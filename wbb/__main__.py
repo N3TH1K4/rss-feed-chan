@@ -160,7 +160,7 @@ keyboard = InlineKeyboardMarkup(
 @app.on_message(~filters.edited & filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
-        return await message.reply_photo("https://wallpapercave.com/dwp1x/wp6599471.jpg",caption =
+        return await message.reply_photo("https://i.pinimg.com/originals/8d/81/ea/8d81ea590556d7827cd22f5fea69a3aa.jpg",caption =
             "**Come to My Home for help Onii-Chan! and bring me a cola**", reply_markup=keyboard
         )
     if len(message.text.split()) > 1:
@@ -287,12 +287,9 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Konichiwa, Its me the Goddess Ishtar.
-I'm a God who can manage you entire group with great powers.
-You pebble can choose an option below, by clicking a button..
-
+Here is the help..Now gimme potato chips adn cola
 General command are:
- - /start: Call Me
+ - /start: Try it
  - /help: Give this message
  """
     if mod_match:
