@@ -6,7 +6,13 @@ from pyrogram.errors import (
     ChannelInvalid, ChannelPrivate, InputUserDeactivated,
     UserIsBlocked
 )
-from pyrogram.types import Message
+from pyrogram.types import (
+    CallbackQuery,
+    ChatPermissions,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+)
 
 from wbb import RSS_DELAY, app, log
 from wbb.core.decorators.errors import capture_err
@@ -56,11 +62,8 @@ async def rss_worker():
                 if feed.title == last_title:
                     continue
                 lmao = feed.link
-                #await app.send_message(
-                    #chat, feed.parsed(), disable_web_page_preview=True
-                #)
                 await app.send_message(
-                    chat, lmao, disable_web_page_preview=True
+                    chat, feed.parsed(), disable_web_page_preview=True
                 )
                 await update_rss_feed(chat, feed.title)
             except (
@@ -109,10 +112,16 @@ async def add_feed_func(_, m: Message):
     chat_id = m.chat.id
     if await is_rss_active(chat_id):
         return await m.reply("[ERROR]: You already have an RSS feed enabled.")
+    lmao = feed.link
+    llink = InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton(
+                        text="Link!",
+                        url=lmao,
+                    )
+                    ]])
     try:
-        lmao = feed.link
-        await m.reply(feed.parsed(), disable_web_page_preview=True)
-        await m.reply(lmao, disable_web_page_preview=True)
+        await m.reply(feed.parsed(), disable_web_page_preview=True,reply_markup=llink,)
     except Exception:
         return await m.reply(ns)
     await add_rss_feed(chat_id, parsed.url, feed.title)
