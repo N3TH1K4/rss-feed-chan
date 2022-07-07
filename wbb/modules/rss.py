@@ -62,8 +62,16 @@ async def rss_worker():
                 if feed.title == last_title:
                     continue
                 lmao = feed.link
+                llink = InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton(
+                        text="Link!",
+                        url=lmao,
+                    )
+                    ]])
+                
                 await app.send_message(
-                    chat, feed.parsed(), disable_web_page_preview=True
+                    chat, feed.parsed(), disable_web_page_preview=True,reply_markup=llink,
                 )
                 await update_rss_feed(chat, feed.title)
             except (
