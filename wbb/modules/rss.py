@@ -110,7 +110,9 @@ async def add_feed_func(_, m: Message):
     if await is_rss_active(chat_id):
         return await m.reply("[ERROR]: You already have an RSS feed enabled.")
     try:
+        lmao = feed.link
         await m.reply(feed.parsed(), disable_web_page_preview=True)
+        await m.reply(lmao, disable_web_page_preview=True)
     except Exception:
         return await m.reply(ns)
     await add_rss_feed(chat_id, parsed.url, feed.title)
