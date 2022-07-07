@@ -47,7 +47,6 @@ from wbb.utils.dbfunctions import (
 )
 from wbb.utils.functions import extract_user, extract_user_and_reason, restart
 
-__MODULE__ = "Sudoers"
 __HELP__ = """
 /stats - To Check System Status.
 /gstats - To Check Bot's Global Stats.
