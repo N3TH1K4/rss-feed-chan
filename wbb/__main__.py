@@ -188,9 +188,8 @@ async def start(_, message):
                 reply_markup=keyb,
             )
     else:
-        await message.reply_photo("https://wallpapercave.com/dwp1x/wp6599519.jpg")
-        await message.reply(
-            home_text_pm,
+        await message.reply_photo("https://wallpapercave.com/dwp1x/wp6599519.jpg",
+            caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
     return
