@@ -129,14 +129,7 @@ BOT_USERNAME = x.username
 BOT_MENTION = x.mention
 BOT_DC_ID = x.dc_id
 
-USERBOT_ID = y.id
-USERBOT_NAME = y.first_name + (y.last_name or "")
-USERBOT_USERNAME = y.username
-USERBOT_MENTION = y.mention
-USERBOT_DC_ID = y.dc_id
 
-if USERBOT_ID not in SUDOERS:
-    SUDOERS.add(USERBOT_ID)
 
 log.info("Initializing Telegraph client")
 telegraph = Telegraph()
