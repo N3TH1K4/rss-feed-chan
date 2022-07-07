@@ -62,10 +62,14 @@ async def rss_worker():
                 if feed.title == last_title:
                     continue
                 lmao = feed.link
+                if "animepahe" in lmao:
+                    na = "Watch This!"
+                else:
+                    na = "Link!
                 llink = InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton(
-                        text="Link!",
+                        text=na,
                         url=lmao,
                     )
                     ]])
@@ -121,10 +125,14 @@ async def add_feed_func(_, m: Message):
     if await is_rss_active(chat_id):
         return await m.reply("[ERROR]: You already have an RSS feed enabled.")
     lmao = feed.link
+    if "animepahe" in lmao:
+        na = "Watch This!"
+    else:
+        na = "Link!"
     llink = InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton(
-                        text="Link!",
+                        text=na,
                         url=lmao,
                     )
                     ]])
