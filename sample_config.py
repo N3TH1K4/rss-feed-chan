@@ -29,7 +29,7 @@ if HEROKU:
 else:
     BOT_TOKEN = "5588117391:AAGYNQNFoU1g_4nVFxp-4A7NsXsjbjKfiR8"
     API_ID = 18983092
-    API_HASH = "dfxcgs5s12hdcxfgdfz"
+    API_HASH = "a6005a70e88369b4fb08b8350ebbdd35"
     USERBOT_PREFIX = "."
     PHONE_NUMBER = "+94702539508"  # Need for Userbot
     SUDO_USERS_ID = [
