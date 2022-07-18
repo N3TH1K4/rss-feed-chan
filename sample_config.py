@@ -27,22 +27,21 @@ if HEROKU:
     RSS_DELAY = int(environ.get("RSS_DELAY", None))
     PM_PERMIT = bool(int(environ.get("PM_PERMIT", None)))
 else:
-    BOT_TOKEN = "467677575:YZfaakjwd545dfg-N6JStihhuw5gQeZHntc"
-    API_ID = 123456
+    BOT_TOKEN = "5588117391:AAGYNQNFoU1g_4nVFxp-4A7NsXsjbjKfiR8"
+    API_ID = 18983092
     API_HASH = "dfxcgs5s12hdcxfgdfz"
     USERBOT_PREFIX = "."
-    PHONE_NUMBER = "+916969696969"  # Need for Userbot
+    PHONE_NUMBER = "+94702539508"  # Need for Userbot
     SUDO_USERS_ID = [
-        4543744343,
-        543214651351,
+        1930645496,
     ]  # Sudo users have full access to everything, don't trust anyone
-    LOG_GROUP_ID = -100125431255
-    GBAN_LOG_GROUP_ID = -100125431255
-    MESSAGE_DUMP_CHAT = -1001181696437
+    LOG_GROUP_ID = -1001549232084
+    GBAN_LOG_GROUP_ID = -1001549232084
+    MESSAGE_DUMP_CHAT = -1001549232084
     WELCOME_DELAY_KICK_SEC = 300
-    MONGO_URL = "mongodb+srv://username:password@cluster0.ksiis.mongodb.net/YourDataBaseName?retryWrites=true&w=majority"
-    ARQ_API_KEY = "Get this from @ARQRobot"
+    MONGO_URL = "mongodb+srv://TROJ3N:Nethika123@cluster0.uppg6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    ARQ_API_KEY = "MHUNZH-XFGSYO-BFQSZR-HDTQGL-ARQ"
     ARQ_API_URL = "https://arq.hamker.in"
-    LOG_MENTIONS = True
+    LOG_MENTIONS = False
     RSS_DELAY = 300  # In seconds
     PM_PERMIT = True
